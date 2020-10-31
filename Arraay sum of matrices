@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int a[30][20],b[30][20],Result[20][30],i,j,p,q,r,c;
+    printf("Enter the form of 1st matrix :- ");
+    scanf("%d%d",&p,&q);
+    printf("Enter the form of 2nd matrix :- ");
+    scanf("%d%d",&r,&c);
+    if(p==r && q==c)
+    {
+      printf("Enter the values in first matrix -:\n");
+        for(i=0;i<p;i++)
+
+        {
+            for(j=0;j<q;j++)
+            {
+                scanf("%d",&a[i][j]);
+            }
+        }
+          printf("Enter the values in second matrix -:\n");
+         for(i=0;i<r;i++)
+
+         {
+             for(j=0;j<c;j++)
+             {
+                 scanf("%d",&b[i][j]);
+             }
+         }
+         for(i=0;i<p;i++)
+         {
+             for(j=0;j<q;j++)
+             {
+                 Result[i][j]=a[i][j]+b[i][j];
+             }
+         }
+         printf("The sum of the matrix is-:\n ");
+         for(i=0;i<p;i++)
+         {
+             for(j=0;j<q;j++)
+             {
+                 printf("\t %d",Result[i][j]);
+             }
+             printf("\n");
+         }
+
+    }
+    else
+    {
+        printf("Sum is not possible ");
+    }
+}
